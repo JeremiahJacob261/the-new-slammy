@@ -53,7 +53,6 @@ function Products() {
                 <Row class="product-catalog">
                   <Col class="product-catalog-col">
                     <Row>
-                      
                       <img src={pro.imageUrl} id="fire-image" alt="productImage" />
                     </Row>
                     <Row>
