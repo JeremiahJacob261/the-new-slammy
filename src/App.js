@@ -6,7 +6,7 @@ import Header from './components/Header.js';
 import Footer from './components/footer.js';
 import Products from './components/Product.js';
 import Fpp from './components/flutterwave-config.js';
-import AdminHome from './admin.admin.js'
+import AdminHome from './admin/admin.js'
 
 export default function App() {
   return (
