@@ -67,7 +67,7 @@ function Products() {
                     <Row>
                       <p  value={proPrice}
             onChange={(proPrice) => {
-              setProPrice(proPrice.target.value);
+              setProPrice(proPri.target.value);
             }}>{pro.price}</p>
                     </Row>
                   </Col>
