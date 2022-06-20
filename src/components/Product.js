@@ -14,7 +14,7 @@ function Products() {
     getUsers();
   }, []);
   const [proTitle, setProTitle]=useState();
-  const [proDes, setProDes]=useState();
+  const [proPrice, setProPrice]=useState();
 
   return (
     <div>
@@ -65,7 +65,10 @@ function Products() {
             }}>{pro.product}</h5>
                     </Row>
                     <Row>
-                      <p>{pro.price}</p>
+                      <p  value={proPrice}
+            onChange={(proPrice) => {
+              setProPrice(proPrice.target.value);
+            }}>{pro.price}</p>
                     </Row>
                   </Col>
                 </Row>
@@ -78,4 +81,4 @@ function Products() {
   );
 }
 export default Products;
-export {useProTitle,useProDes};
+export {useProTitle,useProPrice};
