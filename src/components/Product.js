@@ -13,6 +13,8 @@ function Products() {
     };
     getUsers();
   }, []);
+  const [proTitle, setProTitle]=useState();
+  const [proDes, setProDes]=useState();
 
   return (
     <div>
@@ -47,6 +49,7 @@ function Products() {
       </div>
       <div>
         {product.map((pro) => {
+         
           return (
             <div>
               <Container>
@@ -56,7 +59,10 @@ function Products() {
                       <img src={pro.imageUrl} id="fire-image" alt="productImage" />
                     </Row>
                     <Row>
-                      <h5>{pro.product}</h5>
+                      <h5  value={proTitle}
+            onChange={(proTitle) => {
+              setProTitle(proTitle.target.value);
+            }}>{pro.product}</h5>
                     </Row>
                     <Row>
                       <p>{pro.price}</p>
@@ -72,3 +78,4 @@ function Products() {
   );
 }
 export default Products;
+export {useProTitle,useProDes};
